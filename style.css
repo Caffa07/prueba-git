@@ -1,0 +1,115 @@
+        #divGradiente {
+            width: 100%;
+            height: 780px;
+            background: linear-gradient(to right, red, yellow, green);
+        }
+        
+        #divFondo {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            z-index: -1;
+            border: solid 2px black;
+        }
+        
+        .divTransform,
+        .divTransition {
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        .divTransform{
+            /*transform: translate(50px, 20px);
+            transform: rotate(60deg);
+            transform: rotateX(60deg);
+            transform: rotateY(60deg);
+            transform: scale(-1,-1);
+            transform: scaleX(-1);
+            transform: scaleY(-1);
+            transform: skew(20deg, 10deg);*/
+        }
+        .divTransition{
+            transition: height 2s;
+            transition: height 2s, width 1s;
+            transition: all 2;
+        }
+
+
+        .divTransition:hover{
+            height: 700px;
+            width: 600px;
+            background-color:rgba(0, 255, 0, 0.5);
+        }
+        
+        input {
+            width: 80px;
+            height: 50px;
+            transition: all 2s;
+        }
+        input:focus{
+            width: 100px;
+            height: 70px;
+            font-size: 24px;
+        }
+        #divAnim {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-name: un_efecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+            animation-delay: 3s;   
+        }
+        @keyframes un_efecto{
+            0%{}
+            25%{width: 30px;}
+            50%{width: 200px; background-color: red;}
+            75%{width: 300px;}
+            100%{width: 100px; background-color: green;}
+        }
+        div.animame {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.9);
+            border: solid 1px;
+        }
+        
+        div {
+            position: relative;
+            left: 200px;
+            top: 50px;
+        }
+        
+        div:not(.animame) {
+            border: solid 1px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 207px;
+            top: 57px;
+        }
+        .animame{
+            animation: animacion 1s linear 3s infinite alternate;
+        }
+        @keyframes animacion{
+            from{}
+            to{
+                transform: skewY(25deg);
+            }
+        }
+        h1 {
+            animation-duration: 2s;
+            animation-name: aparecer;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes aparecer {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
